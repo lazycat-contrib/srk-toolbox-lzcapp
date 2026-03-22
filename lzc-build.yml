@@ -1,0 +1,4 @@
+# LazyCat Build Configuration
+manifest: ./lzc-manifest.yml
+pkgout: ./
+icon: ./icon.png
