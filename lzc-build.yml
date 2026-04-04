@@ -1,4 +1,6 @@
-# LazyCat Build Configuration
+---
+# LPK v2 Build Configuration
 manifest: ./lzc-manifest.yml
-pkgout: ./
+package: ./package.yml
 icon: ./icon.png
+pkgout: ./
