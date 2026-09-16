@@ -1,0 +1,38 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: .lazycat-build/srk-toolbox.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: srk-toolbox
+build:
+  run_buildscript: false
+images:
+  # 上游 docker hub czyt/srk-toolbox：immutable semver 家族（v10.x.y）→ stable channel
+  - id: srk-toolbox
+    target: service
+    service: srk-toolbox
+    source: czyt/srk-toolbox
+    channel: stable
+    sort: semver
+    tag_regex: '^v\d+\.\d+\.\d+$'
+    delivery:
+      mode: lazycat
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    changelog_locales: [zh, en]
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: SRK Toolbox
+    summary: "一个多功能的工具箱应用"

@@ -9,8 +9,7 @@ application:
 
 services:
   srk-toolbox:
-    image: registry.lazycat.cloud/czyt/czyt/srk-toolbox:b7727e0e6e3625a1
-    ports:
-      - "8080:80"
+    # upstream: czyt/srk-toolbox:v10.21.0
+    image: czyt/srk-toolbox:v10.21.0
     cpu_shares: 512
     mem_limit: 512M

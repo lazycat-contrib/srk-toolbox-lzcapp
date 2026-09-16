@@ -3,7 +3,7 @@ package: cloud.lazycat.app.srk-toolbox
 version: 10.21.0
 name: SRK Toolbox
 description: "SRK Toolbox - A versatile toolkit application"
-min_os_version: "1.3.8"
+min_os_version: "1.5.0"
 license: MIT
 author: czyt
 homepage: https://github.com/czyt/srk-toolbox
