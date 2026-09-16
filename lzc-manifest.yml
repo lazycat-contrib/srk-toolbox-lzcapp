@@ -1,4 +1,3 @@
----
 application:
   subdomain: srk-toolbox
   public_path:
@@ -6,10 +5,9 @@ application:
   upstreams:
     - location: /
       backend: http://srk-toolbox:80/
-
 services:
   srk-toolbox:
     # upstream: czyt/srk-toolbox:v10.21.0
-    image: czyt/srk-toolbox:v10.21.0
+    image: registry.lazycat.cloud/czyt/czyt/srk-toolbox:b7727e0e6e3625a1
     cpu_shares: 512
     mem_limit: 512M
